@@ -1,0 +1,223 @@
+ <script>
+ var subjectObject = {
+  "Agriculture": {
+    "Crop farming": ["Cassava", "Cocoa", "Coconut","Cocoyam", "Cowpea", "Irish Potatoe","Sweet Potatoe","Ginger",
+    "Groundnut","Guinea Corn","Gum Arabic","Oil Palm","Pepper","Plantain","Rice","Rubber","Sessame",
+    "Shea","Soyabeans","Sugar Cane","Tomatoe","Yam","Wheat"],
+    "Livestock": ["Rabbit", "Sheep", "Goats", "Cattle"],
+    "Fisheries and aquaculture": ["Catfish", "Tilapia", "Titus", "Crayfish/Shrimps"],    
+    "Heliculture": ["Snails"],
+    "Poultry": ["Poultry"], 
+    "Apiculture": ["Apiculture"],  
+    "Equipment": ["Agriculture Machinery Rental"],    
+    "Agric Machines and Equipment": ["Rentals", "Sales"],
+    "Horticulture": ["Hibiscus", "Guava", "Mango", "Onion", "Pawpaw", "Others", "Pineapple"],
+    "Storage": ["Warehouse", "Cold Room"],
+    "Sustainable Farming": ["Greenhouse Farming", "Integrated Farming"],  
+    "Piggery": ["Pigs"],  
+    "Animal Husbandry": ["Animal Husbandry"],    
+    "Processing": ["Butchery", "Cashew nut Oil Processing", "Castor Oil Processing", "Cassava Processing","Chili Processing","Coconut Oil Processing"
+    ,"Cotton Seed Oil Processing","Food Processing and Packaging",
+    "Dry Fruit Packaging","Dry Fish","Flour Production","Fruit Juice",
+    "Garri Processing","Groundnut Oil Processing","Ginger Processing",
+    ,"Maize Milling","Millet Milling","Palm Kernel Processing","Palm Oil Processing","Sessame Processing",
+    "Shea Butter Processing","Sorghum Milling","Maize Milling","Sugar processing","Wheat Milling","Wine Processing","Yam Processing"]    
+  }, 
+  "Creative Arts": {
+    "Beauty": ["Cosmetics Production", "Essential Oil Production", "Beauty Salon", "Barber Shop"],
+    "Arts and entertainment": ["Arts and Craft", "Movie / Firm", "Music", "Photography"],
+    "Fashion": ["African Wax Print", "Bag Making", "Fashion Design", "Java Print", "Shoe Making", "Textile Design and Production"]
+  },
+  "Construction": {
+    "Borehole Drilling": ["Borehole Drilling"],
+    "Residential Properties": ["Residential Properties"]
+  },
+  "Energy and Power Generation": {
+    "Renewable Energy": ["Solar Energy"],
+    "Power": ["Metering Services"]
+  },
+  "Education": {
+    "Formal Education": ["Formal Education"],
+    "Informal Education": ["Informal Education"]
+  },
+  "Environmental": {
+    "Dredging": ["Dredging"],
+    "Geophysical Survey Mineral Exploration Services": ["Geophysical Survey Mineral Exploration Services"],
+    "Landscaping": ["Landscaping"],
+    "Paper Recycling": ["Paper Recycling"],
+    "Plastic Recycling": ["Plastic Recycling"],
+    "Waste Management": ["Waste Management"]
+  },
+  "Financial Services": {
+    "Agency Banking": ["Agency Banking"],
+    "FinTech": ["FinTech"],
+    "Insurance": ["Insurance"]
+  },
+  "Food and Beverage": {
+    "Brewing": ["Brewing"],
+    "Catering": ["Fast Food"],
+    "Insurance": ["Insurance"],
+    "Cereal Production": ["Cereal Production"],
+    "Diary": ["Yoghurt Production"],
+    "Fruit Juice Production": ["Fruit Juice Production"],
+    "Honey Production": ["Honey Production"],
+    "Ice Production": ["Ice Production"],
+    "Packaged Snacks": ["Packaged Snacks"],
+    "Water Bottling": ["Water Bottling"],
+    "Wine Making": ["Wine Making"]
+  },
+  "Healthcare": {
+    "Fitness and Wellness Centres": ["Fitness and Wellness Centres"],
+    "Herbal": ["Natural Medicine and Oil"],
+    "Hospital and Clinical Services": ["Hospital and Clinical Services"],
+    "Medical and Laboratory Equipment Supply": ["Medical and Laboratory Equipment Supply"],
+    "Medical Courier": ["Medical Courier"],
+    "Telemedicine": ["Telemedicine"],
+    "Veterinary Services": ["Veterinary Services"],
+    "Pharmaceutical Production and Distribution": ["Pharmaceutical Production and Distribution"]
+  },
+  "Hospitality": {
+    "Commercial Real Estate": ["Commercial Real Estate"],
+    "Co-Working Space": ["Co-Working Space"],
+    "Hotel": ["Hotel"],
+    "Tourism": ["Tourism"]
+  },
+  "Informal Services": {
+    "Auto Repair Mechanic": ["Auto Repair Mechanic"],
+    "Business Centre": ["Business Centre"],
+    "Car Wash": ["Car Wash"],
+    "Cleaning Services": ["Cleaning Services"],
+    "Driving School": ["Driving School"],
+    "Event Management and Planning": ["Event Management and Planning"],
+    "Furmigation": ["Furmigation"],
+    "Furniture Making": ["Furniture Making"],
+    "Laundry Services": ["Laundry Services"],
+    "Landscaping": ["Landscaping"],
+    "Interior Decoration": ["Interior Decoration"],
+    "Industrial Planning": ["Industrial Planning"],
+    "Online Food Delivery": ["Online Food Delivery"],
+    "Tailoring": ["Tailoring"],
+    "Technician": ["Electrical Repairs"],
+    "Utility Poles": ["Utility Poles"],
+    "Vulcanizer": ["Vulcanizer"]
+  },
+  "Information Communication Technology": {
+    "Graphic Design": ["Graphic Design"],
+    "IT Training Centres": ["IT Training Centres"],
+    "Software Development": ["Software Development"],
+    "Telecommunication": ["Telecommunication"]
+  },
+  "Manufacturing": {
+    "Automobile Assembly": ["Automobile Assembly"],
+    "Battery": ["Battery"],
+    "Candle Production": ["Candle Production"],
+    "Charcoal Production": ["Charcoal Production"],
+    "Cookware": ["Cookware"],
+    "Cleaning Agents": ["Cleaning Agents"],
+    "Construction Chemicals": ["Construction Chemicals"],
+    "Desinfectants": ["Desinfectants"],
+    "Electrical Appliances": ["Electrical Appliances"],
+    "Electronic Devices": ["Electronic Devices"],
+    "Cookstove": ["Cookstove"],
+    "Fabrication": ["Metalwork"],
+    "Furniture": ["Woodwork"],
+    "Hair Extension Production": ["Hair Extension Production"],
+    "Leatherwork": ["Leatherwork"],
+    "Lubricant Production": ["Lubricant Production"],
+    "Mattress Production": ["Mattress Production"],
+    "Printing Production": ["Printing Production"],
+    "Paper Towel Production": ["Paper Towel Production"],
+    "Paper Packaging": ["Paper Packaging"],
+    "Rattan Weaving": ["Rattan Weaving"],
+    "Paint Production": ["Paint Production"],
+    "Plastic Manufacturing": ["Plastic Manufacturing"],
+    "Prolypropylene": ["Prolypropylene"],
+    "Safety Equipment": ["Safety Equipment"],
+    "Soap Production": ["Soap Production"],
+    "Stationery Production": ["Stationery Production"],
+    "Toothpick Production": ["Toothpick Production"],
+    "Tyre Sealant": ["Tyre Sealant"],
+    "Cement Manufacturing": ["Cement Manufacturing"],
+    "Quarying": ["Block Making"],
+    "Beads and Ornaments Production": ["Beads and Ornaments Production"]
+  
+  },
+  "Financial Services": {
+    "PHP": ["Variables", "Strings", "Arrays"],
+    "SQL": ["SELECT", "UPDATE", "DELETE"]
+  
+  },
+  "Media and entertainment": {
+    "Advertisement and Media": ["Advertisement and Media"],
+    "Branding": ["Branding"],
+    "Broadcasting": ["Broadcasting"],
+    "E-publushing": ["E-publishing"]
+  
+  },
+  "Mining": {
+    "Mineral Processing Plant": ["Mineral Processing Plant"]
+  
+  },
+
+  "Oil and Gas": {
+    "Liquified Petroleum Gas Refilling Plant": ["Liquified Petroleum Gas Refilling Plant"],
+    "Downstream Oil and Gas": ["Downstream Oil and Gas"],
+    "Upstream Oil and Gas": ["Upstream Oil and Gas"]
+  },
+
+    
+  "Supply Chain Logistics": {
+    "Haulage and Logistics": ["Haulage and Logistics"],
+    "Warehousing": ["Warehousing"],
+    "Agricultural Input Distribution": ["Agricultural Input Distribution"],
+  
+  },
+
+      
+  "Trade": {
+    "Customer Retail": ["Customer Retail"],
+    "International Trade": ["International Trade"],
+    "Online Retail": ["Online Retail"],
+ },
+
+      
+ "Transportation": {
+    "Road Transport":["Road Transport"],
+    "Air Transport": ["Air Transport"],
+  
+ },
+
+       
+ "Services": {
+    "Investigation and Security Services": ["Investigation and Security Services"],
+ }
+}
+window.onload = function() {
+  var subjectSel = document.getElementById("bus_sec");
+  var topicSel = document.getElementById("bus_sub_sec");
+  var chapterSel = document.getElementById      ("bus");
+  for (var x in subjectObject) {
+    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+  }
+  subjectSel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    chapterSel.length = 1;
+    topicSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      topicSel.options[topicSel.options.length] = new Option(y, y);
+    }+
+  }
+  topicSel.onchange = function() {
+    //empty Chapters dropdown
+    chapterSel.length = 1;
+    //display correct values
+    var z = subjectObject[subjectSel.value][this.value];
+	
+    for (var i = 0; i < z.length; i++) {
+		
+      chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
+</script>
